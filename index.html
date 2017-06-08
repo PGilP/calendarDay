@@ -1,0 +1,24 @@
+<div class="module calendarday" ng-controller="calendardayController">
+  <div class="navigation-bar">
+    <koa-icon-button class="arrow-back" icon="arrow-back" ng-click="changeDay(true)"></koa-icon-button>
+    <p class="actual-view">{{actualView.format('ddd DD MMM YYYY')}}</p>
+    <koa-icon-button class="arrow-forward" icon="arrow-forward" ng-click="changeDay()" ></koa-icon-button>
+  </div>
+  <div class="error" ng-if="error">{{error}}</div>
+  <div class="calendar-items" ng-repeat="event in events | orderBy : 'start.dateTime || start.date'">
+    <koa-item class="day-event">
+      <div class="text">
+        <div class="event-summary">{{event.summary}}</div>
+        <div class="event-duration" ng-if="isDateTimeEvent(event)">{{eventStart}} - {{eventEnd}}</div>
+        <div class="event-description">{{event.description}}</div>
+      </div>
+    </koa-item>
+  </div>
+  <div ng-if="emptyEvents">
+    <koa-item class="empty-day" >
+      <div class="error-message">{{emptyEvents}}</div>
+    </koa-item>
+  </div>
+
+
+</div>

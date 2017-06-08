@@ -1,0 +1,13 @@
+{
+  "name": "calendarday",
+  "authors": "King",
+  "description": "",
+  "keywords": [
+    "kingofapp",
+    "module"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {}
+}

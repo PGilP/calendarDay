@@ -1,0 +1,63 @@
+{
+  "name": "calendarday",
+  "identifier": "calendarday",
+  "description": {
+    "es-ES": "",
+    "en-US": ""
+  },
+  "documentation": {
+    "es-ES": "modules/calendarday/docs/es_ES.md",
+    "en-US": "modules/calendarday/docs/en_US.md"
+  },
+  "descriptionShort": {
+    "es-ES": "",
+    "en-US": ""
+  },
+  "icon": "room",
+  "type": "A",
+  "version": "0.0.1",
+  "author": "King",
+  "category": ["others"],
+  "price": 0,
+  "subscription": false,
+  "canContain": false,
+  "platforms": [
+    "android",
+    "ios",
+    "windows"
+  ],
+  "view": "modules/calendarday/index.html",
+  "files": [
+    "modules/calendarday/controller.js",
+    "modules/calendarday/style.html",
+    "modules/calendarday/gcalendar.service.js"
+  ],
+  "scope": {
+    "calendarId": "gastroman17@gmail.com",
+    "apiKey": "AIzaSyDRKulDaTdh3_KIVfVtM14oGKyi0SK9GGg",
+    "locale": "en"
+  },
+  "libs": [
+    {
+      "bower": {
+        "moment": "^2.11.2"
+      },
+      "src": "bower_components/moment/min/moment-with-locales.min.js"
+    }
+  ],
+  "config": [],
+  "showOn": {
+    "menu": true,
+    "market": true,
+    "dragDrop": true
+  },
+  "images": {
+    "list": "modules/calendarday/images/list.png",
+    "screenshots": [
+      "modules/calendarday/images/screenshot01.png"
+    ],
+    "popover": "modules/calendarday/images/popover.png",
+    "banner": "modules/calendarday/images/banner.png",
+    "logo": "modules/calendarday/images/logo.png"
+  }
+}
