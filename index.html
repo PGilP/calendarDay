@@ -1,8 +1,8 @@
 <div class="module calendarday" ng-controller="calendardayController">
   <div class="navigation-bar">
-    <koa-icon-button class="arrow-back" icon="arrow-back" ng-click="changeDay(true)"></koa-icon-button>
+    <koa-button class="arrow-back" ng-click="changeDay(true)">Prev</koa-button>
     <p class="actual-view">{{actualView.format('ddd DD MMM YYYY')}}</p>
-    <koa-icon-button class="arrow-forward" icon="arrow-forward" ng-click="changeDay()" ></koa-icon-button>
+    <koa-button class="arrow-forward" ng-click="changeDay()" >Next</koa-button>
   </div>
   <div class="error" ng-if="error">{{error}}</div>
   <div class="calendar-items" ng-repeat="event in events | orderBy : 'start.dateTime || start.date'">
