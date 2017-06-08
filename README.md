@@ -15,6 +15,6 @@
 
 ### Details:
 
-- Author: King
+- Author: King of App
 - Version: 0.0.1
 - Homepage: 
