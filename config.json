@@ -2,21 +2,21 @@
   "name": "calendarday",
   "identifier": "calendarday",
   "description": {
-    "es-ES": "",
-    "en-US": ""
+    "es-ES": "Calendario que muestra los eventos de cada día alojados en Google Calendar. Debes pasar como parámetros la apiKey, el Google CalendarID y el tipo de calendario que quieres ('en' o 'es').",
+    "en-US": "Calendar showing the events of each day hosted in Google Calendar. You must pass the parameters apiKey, Google CalendarID and the type of calendar you want ('en' or 'es')"
   },
   "documentation": {
     "es-ES": "modules/calendarday/docs/es_ES.md",
     "en-US": "modules/calendarday/docs/en_US.md"
   },
   "descriptionShort": {
-    "es-ES": "",
-    "en-US": ""
+    "es-ES": "Calendario que muesta los eventos de cada día.",
+    "en-US": "Calendar showing the events of each day."
   },
   "icon": "room",
   "type": "A",
   "version": "0.0.1",
-  "author": "King",
+  "author": "King of App",
   "category": ["others"],
   "price": 0,
   "subscription": false,
@@ -28,9 +28,9 @@
   ],
   "view": "modules/calendarday/index.html",
   "files": [
-    "modules/calendarday/controller.js",
-    "modules/calendarday/style.html",
-    "modules/calendarday/gcalendar.service.js"
+      "modules/calendarday/controller.js",
+      "modules/calendarday/style.html",
+      "modules/calendarday/gcalendar.service.js"
   ],
   "scope": {
     "calendarId": "gastroman17@gmail.com",
@@ -45,7 +45,42 @@
       "src": "bower_components/moment/min/moment-with-locales.min.js"
     }
   ],
-  "config": [],
+  "config": [
+    {
+      "type": "input",
+      "key": "calendarId",
+      "templateOptions": {
+        "type": "text",
+        "label": "Introduce el CalendarID",
+        "required": true
+      }
+    },
+    {
+      "type": "input",
+      "key": "apiKey",
+      "templateOptions": {
+        "type": "text",
+        "label": "Introduce la apiKey",
+        "required": true
+      }
+    },
+    {
+      "type": "select",
+      "key": "locale",
+      "templateOptions": {
+        "label": "Elije el formato e idioma del calendario",
+        "valueProp": "localeOption",
+        "options": [
+            {
+              "localeOption": "en"
+            },
+            {
+              "localeOption": "es"
+            }
+          ]
+      }
+    }
+  ],
   "showOn": {
     "menu": true,
     "market": true,
